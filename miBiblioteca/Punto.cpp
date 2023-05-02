@@ -2,13 +2,13 @@
 
 
 Punto::Punto(void){
-    this->x = 0.0;
-    this->y = 0.0;
+    Punto::x = 0.0;
+    Punto::y = 0.0;
     //cout << "Objeto construido, this -> " << this << endl;
 }
 Punto::Punto(double x, double y){
-    this->x = x;
-    this->y = y;
+    Punto::x = x;
+    Punto::y = y;
     //cout << "Objeto construido, this -> " << this << endl;
 }
 Punto::~Punto(void){

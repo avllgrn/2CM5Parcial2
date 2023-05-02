@@ -1,13 +1,13 @@
 #include "Complejo.h"
 
 Complejo::Complejo(void){
-	this->real = 0.0;
-	this->imaginario = 0.0;
+	Complejo::real = 0.0;
+	Complejo::imaginario = 0.0;
 	//cout << "Objeto construido, this -> " << this << endl;
 }
 Complejo::Complejo(double real, double imaginario){
-	this->real = real;
-	this->imaginario = imaginario;
+	Complejo::real = real;
+	Complejo::imaginario = imaginario;
 	//cout << "Objeto construido, this -> " << this << endl;
 }
 Complejo::~Complejo(void){
