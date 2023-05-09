@@ -4,28 +4,23 @@
 using namespace std;
 
 int main(void){
-    Fraccion A, B, C;
+    Fraccion A(1,2), B, C, D, E, F;
+    B.modificaTusAtributos(3,4);
 
-    //1.Pide dato(s)
-    cout<<endl<<"Ingresa la Fraccion 1"<<endl;
-    A.pideleAlUsuarioTusAtributos();
-    cout<<endl<<"Ingresa la Fraccion 2"<<endl;
-    B.pideleAlUsuarioTusAtributos();
-
-    C.modificaTuAtributoNumerador(
-        (A.retornaTuAtributoNumerador() * B.retornaTuAtributoDenominador() )
-        +
-        (B.retornaTuAtributoNumerador() * A.retornaTuAtributoDenominador() )
-    );
-    C.modificaTuAtributoDenominador(
-        A.retornaTuAtributoDenominador() * B.retornaTuAtributoDenominador()
-    );
+    C = sumaFracciones(A,B);
+    D = restaFracciones(A,B);
+    E = multiplicaFracciones(A,B);
+    F = divideFracciones(A,B);
 
     //3.Muestra resultado(s)
     cout<<endl;
     cout<<"A   = ";A.muestraTusAtributos();cout<<endl;
     cout<<"B   = ";B.muestraTusAtributos();cout<<endl;
     cout<<"A+B = ";C.muestraTusAtributos();cout<<endl;
+    cout<<"A-B = ";D.muestraTusAtributos();cout<<endl;
+    cout<<"A*B = ";E.muestraTusAtributos();cout<<endl;
+    cout<<"A/B = ";F.muestraTusAtributos();cout<<endl;
+    cout<<endl;
 
     return 0;
 }
