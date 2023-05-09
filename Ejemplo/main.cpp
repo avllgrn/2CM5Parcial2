@@ -1,27 +1,31 @@
 #include <iostream>
 #include <stdlib.h>
-#include "Circulo.h"
+#include "Rectangulo.h"
 using namespace std;
 
 int main(void){
-    Circulo A, B(1), C, D;
+    Rectangulo A, B, C(4,5), D, E;
 
     cout<<"Ingresa C"<<endl;
-    C.pideleAlUsuarioTusDatos();
+    B.pideleAlUsuarioTusDatos();
 
-    D.modificaTuRadio(3 * C.dameTuRadio());
+    D.modificaTuBase(2 * C.dameTuBase());
+    D.modificaTuAltura(2 * C.dameTuAltura());
+
+    E.modificaTusDatos(3 * D.dameTuBase(), 3 * D.dameTuAltura());
 
     //3.Muestra resultado(s)
     cout<<endl;
 
-    cout<<"A\n"<<"Radio:\t   "<<A.dameTuRadio()<<endl
-        <<"Diametro:  "<<A.dameTuDiametro()<<endl
+    cout<<"A\n"<<"Base:\t   "<<A.dameTuBase()<<endl
+        <<"Altura:    "<<A.dameTuAltura()<<endl
         <<"Area:\t   "<<A.dameTuArea()<<endl
         <<"Perimetro: "<<A.dameTuPerimetro()<<endl;
 
     cout<<"B\n";B.muestraTusDatos();cout<<endl;
     cout<<"C\n";C.muestraTusDatos();cout<<endl;
     cout<<"D\n";D.muestraTusDatos();cout<<endl;
+    cout<<"E\n";E.muestraTusDatos();cout<<endl;
 
     cout<<endl;
     return 0;
